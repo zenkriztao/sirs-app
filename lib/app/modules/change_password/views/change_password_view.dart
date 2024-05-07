@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../utils/constants.dart';
 import '../controllers/change_password_controller.dart';
@@ -17,10 +18,9 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
           elevation: 1,
           title: Text(
             'Change ${controller.pageType.value == PageType.PIN ? 'PIN' : 'Password'}',
-            style: const TextStyle(
+            style: GoogleFonts.sora(
               color: Colors.black,
               fontSize: 24,
-              fontWeight: FontWeight.bold,
             ),
           ),
         ),
@@ -36,7 +36,7 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
                     controller.pageType.value == PageType.PIN
                         ? 'Your current PIN'
                         : 'Your current password',
-                    style: const TextStyle(
+                    style: GoogleFonts.sora(
                       color: colorDarkGrey,
                       fontSize: 16,
                     ),
@@ -47,10 +47,9 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
                           showCursor: false,
                           obscureText: controller.visibilityPL.value,
                           obscuringCharacter: '*',
-                          style: const TextStyle(
+                          style: GoogleFonts.sora(
                             letterSpacing: 24,
                             fontSize: 16,
-                            fontWeight: FontWeight.bold,
                             color: colorPrimaryL,
                           ),
                           textAlign: TextAlign.center,
@@ -79,11 +78,11 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
                                 ),
                               ),
                             ),
-                            hintStyle: TextStyle(
+                            hintStyle: GoogleFonts.sora(
                               letterSpacing: 1,
                               fontSize: 16,
                               // fontSize: 12,
-                              fontWeight: FontWeight.bold,
+
                               color: colorPrimaryL.withOpacity(0.7),
                             ),
                           ),
@@ -134,7 +133,7 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
                     controller.pageType.value == PageType.PIN
                         ? 'Your New PIN'
                         : 'Your New Password',
-                    style: const TextStyle(
+                    style: GoogleFonts.sora(
                       color: colorDarkGrey,
                       fontSize: 16,
                     ),
@@ -145,10 +144,9 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
                           showCursor: false,
                           obscureText: controller.visibilityN.value,
                           obscuringCharacter: '*',
-                          style: const TextStyle(
+                          style: GoogleFonts.sora(
                             letterSpacing: 24,
                             fontSize: 16,
-                            fontWeight: FontWeight.bold,
                             color: colorPrimaryL,
                           ),
                           textAlign: TextAlign.center,
@@ -177,11 +175,11 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
                                 ),
                               ),
                             ),
-                            hintStyle: TextStyle(
+                            hintStyle: GoogleFonts.sora(
                               letterSpacing: 1,
                               fontSize: 16,
                               // fontSize: 12,
-                              fontWeight: FontWeight.bold,
+
                               color: colorPrimaryL.withOpacity(0.7),
                             ),
                           ),
@@ -237,10 +235,9 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
                             showCursor: false,
                             obscureText: controller.visibilityCN.value,
                             obscuringCharacter: '*',
-                            style: const TextStyle(
+                            style: GoogleFonts.sora(
                               letterSpacing: 24,
                               fontSize: 16,
-                              fontWeight: FontWeight.bold,
                               color: colorPrimaryL,
                             ),
                             textAlign: TextAlign.center,
@@ -269,11 +266,11 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
                                   ),
                                 ),
                               ),
-                              hintStyle: TextStyle(
+                              hintStyle: GoogleFonts.sora(
                                 letterSpacing: 1,
                                 fontSize: 16,
                                 // fontSize: 12,
-                                fontWeight: FontWeight.bold,
+
                                 color: colorPrimaryL.withOpacity(0.7),
                               ),
                             ),
@@ -355,7 +352,8 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
                       controller.pageType.value == PageType.PIN
                           ? 'Change PIN'
                           : 'Change Password',
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                      style:
+                          GoogleFonts.sora(color: Colors.white, fontSize: 18),
                     ),
                   ),
                 ],

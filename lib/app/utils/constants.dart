@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 const Color kPrimarySecondColor = Color(0xFF282828);
 
@@ -27,7 +28,7 @@ abstract class PageType {
 }
 
 InputDecoration borderTextFormField = InputDecoration(
-  hintStyle: const TextStyle(
+  hintStyle: GoogleFonts.sora(
     color: colorPrimaryL,
   ),
   errorBorder: OutlineInputBorder(
@@ -58,7 +59,7 @@ InputDecoration borderTextFormField = InputDecoration(
       width: 2,
     ),
   ),
-  labelStyle: const TextStyle(
+  labelStyle: GoogleFonts.sora(
     color: colorPrimaryL,
   ),
 );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sirs_apps/app/utils/constants.dart';
 import '../controllers/records_controller.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RecordsView extends GetView<RecordsController> {
   RecordsView({Key? key}) : super(key: key);
@@ -16,12 +17,11 @@ class RecordsView extends GetView<RecordsController> {
         foregroundColor: colorPrimaryL,
         elevation: 0.5,
         shadowColor: Colors.grey,
-        title: const Text(
+        title: Text(
           'ADD RECORDS',
-          style: TextStyle(
+          style: GoogleFonts.sora(
             color: colorPrimaryL,
             fontSize: 24,
-            fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -73,7 +73,7 @@ class RecordsView extends GetView<RecordsController> {
                     ),
                     maxLines: null,
                     minLines: 5,
-                    style: const TextStyle(
+                    style: GoogleFonts.sora(
                       fontSize: 18,
                     ),
                     validator: (value) {

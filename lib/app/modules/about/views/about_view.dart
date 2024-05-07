@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/about_controller.dart';
 
@@ -13,10 +14,10 @@ class AboutView extends GetView<AboutController> {
         title: const Text('AboutView'),
         centerTitle: true,
       ),
-      body: const Center(
+      body: Center(
         child: Text(
           'AboutView is working',
-          style: TextStyle(fontSize: 20),
+          style: GoogleFonts.sora(fontSize: 20),
         ),
       ),
     );

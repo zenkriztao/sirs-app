@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../../../utils/constants.dart';
 import '../controllers/patient_add_controller.dart';
 import 'widgets/patient_form.dart';
@@ -25,10 +26,9 @@ class PatientAddView extends GetView<PatientAddController> {
               shadowColor: Colors.grey,
               title: Text(
                 '${controller.pageType.value == PageType.EDIT ? 'UPDATE' : 'ADD'} PATIENT',
-                style: const TextStyle(
+                style: GoogleFonts.sora(
                   color: colorPrimaryL,
                   fontSize: 24,
-                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),

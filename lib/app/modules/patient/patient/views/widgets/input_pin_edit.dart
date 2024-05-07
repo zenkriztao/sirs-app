@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import '../../../../../data/patient.dart';
 import '../../../../../utils/constants.dart';
 import '../../controllers/patient_controller.dart';
@@ -31,12 +31,11 @@ class InputPinEdit extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 30),
-                const Text(
+                Text(
                   'Enter your PIN to continue',
-                  style: TextStyle(
+                  style: GoogleFonts.sora(
                     color: colorPrimaryL,
                     fontSize: 16,
-                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -46,10 +45,9 @@ class InputPinEdit extends StatelessWidget {
                     showCursor: true,
                     obscureText: controller.pinVisibility.value,
                     obscuringCharacter: '*',
-                    style: const TextStyle(
+                    style: GoogleFonts.sora(
                       letterSpacing: 24,
                       fontSize: 16,
-                      fontWeight: FontWeight.bold,
                       color: colorPrimaryL,
                     ),
                     textAlign: TextAlign.center,
@@ -77,11 +75,11 @@ class InputPinEdit extends StatelessWidget {
                           ),
                         ),
                       ),
-                      hintStyle: TextStyle(
+                      hintStyle: GoogleFonts.sora(
                         letterSpacing: 1,
                         fontSize: 16,
                         // fontSize: 12,
-                        fontWeight: FontWeight.bold,
+
                         color: colorPrimaryL.withOpacity(0.7),
                       ),
                     ),
@@ -116,9 +114,9 @@ class InputPinEdit extends StatelessWidget {
                   ),
                   onPressed:
                       controller.pinController.text.isEmpty ? null : onSubmit,
-                  child: const Text(
+                  child: Text(
                     'Continue',
-                    style: TextStyle(fontSize: 16),
+                    style: GoogleFonts.sora(fontSize: 16),
                   ),
                 ),
               ],

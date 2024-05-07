@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:sirs_apps/app/utils/constants.dart';
 import '../controllers/sing_up_controller.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SingUpView extends GetView<SignUpController> {
   const SingUpView({Key? key}) : super(key: key);
@@ -34,13 +35,10 @@ class SingUpView extends GetView<SignUpController> {
               ),
             ),
             const SizedBox(height: 24),
-            const Text(
+            Text(
               'Create Your\nAppsName Account!',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                  height: 1.2),
+              style: GoogleFonts.sora(
+                  color: Colors.white, fontSize: 24, height: 1.2),
             ),
           ],
         ),
@@ -83,7 +81,7 @@ class SingUpView extends GetView<SignUpController> {
                           controller.regUser.value
                               ? 'Sign up as admin?'
                               : 'Sign up as user?',
-                          style: const TextStyle(
+                          style: GoogleFonts.sora(
                             color: colorPrimaryL,
                           ),
                         ),
@@ -200,10 +198,9 @@ class SingUpView extends GetView<SignUpController> {
                     showCursor: false,
                     obscureText: controller.pinVisibility.value,
                     obscuringCharacter: '*',
-                    style: const TextStyle(
+                    style: GoogleFonts.sora(
                       letterSpacing: 24,
                       fontSize: 16,
-                      fontWeight: FontWeight.bold,
                       color: colorPrimaryL,
                     ),
                     textAlign: TextAlign.center,
@@ -231,11 +228,11 @@ class SingUpView extends GetView<SignUpController> {
                           ),
                         ),
                       ),
-                      hintStyle: TextStyle(
+                      hintStyle: GoogleFonts.sora(
                         letterSpacing: 1,
                         fontSize: 16,
                         // fontSize: 12,
-                        fontWeight: FontWeight.bold,
+
                         color: colorPrimaryL.withOpacity(0.7),
                       ),
                     ),
@@ -302,9 +299,9 @@ class SingUpView extends GetView<SignUpController> {
                             );
                     }
                   },
-                  child: const Text(
+                  child: Text(
                     'Sign Up',
-                    style: TextStyle(fontSize: 16),
+                    style: GoogleFonts.sora(fontSize: 16),
                   ),
                 ),
               ],

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sirs_apps/app/controllers/firestore_controller.dart';
 import 'package:sirs_apps/app/data/patient.dart';
 import 'package:sirs_apps/app/modules/patient/patient/views/widgets/patient_info_card.dart';
@@ -111,10 +112,10 @@ class PatientController extends GetxController {
             ));
     return dataSearch.isEmpty
         ? [
-            const Center(
+           Center(
               child: Text(
                 'Data not found.',
-                style: TextStyle(
+                style: GoogleFonts.sora(
                   color: colorTextSmall,
                 ),
               ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sirs_apps/app/data/patient.dart';
 import 'package:sirs_apps/app/routes/app_pages.dart';
 import '../../../../utils/constants.dart';
@@ -20,12 +21,11 @@ class PatientView extends GetView<PatientController> {
         toolbarHeight: 80,
         leadingWidth: 70,
         elevation: 1,
-        title: const Text(
+        title: Text(
           'Patients',
-          style: TextStyle(
+          style: GoogleFonts.sora(
             color: Colors.black,
             fontSize: 24,
-            fontWeight: FontWeight.bold,
           ),
         ),
         actions: [
@@ -55,7 +55,7 @@ class PatientView extends GetView<PatientController> {
               ],
             ),
             viewHintText: 'Enter patient name',
-            headerHintStyle: const TextStyle(
+            headerHintStyle: GoogleFonts.sora(
               color: colorTextSmall,
               fontSize: 20,
               fontStyle: FontStyle.italic,

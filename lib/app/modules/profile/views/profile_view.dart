@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sirs_apps/app/routes/app_pages.dart';
 
 import '../../../utils/constants.dart';
@@ -19,12 +20,11 @@ class ProfileView extends GetView<ProfileController> {
         foregroundColor: colorPrimaryL,
         toolbarHeight: 80,
         elevation: 1,
-        title: const Text(
+        title: Text(
           'Profile',
-          style: TextStyle(
+          style: GoogleFonts.sora(
             color: Colors.black,
             fontSize: 24,
-            fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -44,10 +44,9 @@ class ProfileView extends GetView<ProfileController> {
                       child: Center(
                         child: Text(
                           '${controller.firstName.value[0].toUpperCase()}${controller.LastName.value[0].toUpperCase()}',
-                          style: const TextStyle(
+                          style: GoogleFonts.sora(
                             color: colorAccent,
                             fontSize: 20,
-                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -59,15 +58,14 @@ class ProfileView extends GetView<ProfileController> {
                       children: [
                         Text(
                           '${controller.firstName.value} ${controller.LastName.value}',
-                          style: const TextStyle(
+                          style: GoogleFonts.sora(
                             color: Colors.black,
                             fontSize: 22,
-                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         Text(
                           controller.email.value,
-                          style: const TextStyle(
+                          style: GoogleFonts.sora(
                             color: colorDarkGrey,
                             fontSize: 16,
                           ),
@@ -92,12 +90,11 @@ class ProfileView extends GetView<ProfileController> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
+                    Text(
                       'Account',
-                      style: TextStyle(
+                      style: GoogleFonts.sora(
                         fontSize: 20,
                         color: colorDarkGrey,
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
                     Container(
@@ -117,10 +114,9 @@ class ProfileView extends GetView<ProfileController> {
                       child: Center(
                         child: Text(
                           controller.role.value == 'admin' ? 'Admin' : 'User',
-                          style: TextStyle(
+                          style: GoogleFonts.sora(
                             fontSize: 16,
                             color: colorPrimaryL.withOpacity(0.8),
-                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -211,10 +207,9 @@ class MenuProfile extends StatelessWidget {
           const SizedBox(width: 8),
           Text(
             title,
-            style: const TextStyle(
+            style: GoogleFonts.sora(
               fontSize: 19,
               color: colorDarkGrey,
-              fontWeight: FontWeight.bold,
             ),
           ),
           const Spacer(),

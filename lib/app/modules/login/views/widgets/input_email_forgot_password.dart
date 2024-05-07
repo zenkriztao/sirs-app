@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sirs_apps/app/modules/login/controllers/login_controller.dart';
 
 import '../../../../utils/constants.dart';
@@ -26,12 +27,11 @@ class InputEmailForgetPassword extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 30),
-                const Text(
+                  Text(
                   'Enter your Email to reset your password',
-                  style: TextStyle(
+                  style: GoogleFonts.sora(
                     color: colorPrimaryL,
                     fontSize: 16,
-                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -63,9 +63,9 @@ class InputEmailForgetPassword extends StatelessWidget {
                           .resetPasswordWithEmail(controller.emailFPC.text);
                     }
                   },
-                  child: const Text(
+                  child: Text(
                     'Continue',
-                    style: TextStyle(fontSize: 16),
+                    style: GoogleFonts.sora(fontSize: 16),
                   ),
                 ),
               ],

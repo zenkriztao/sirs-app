@@ -1,6 +1,7 @@
 import 'package:date_input_form_field/date_input_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../../utils/constants.dart';
 import '../../controllers/patient_add_controller.dart';
@@ -61,7 +62,7 @@ class PatientForm extends StatelessWidget {
                         )),
                     Text(
                       'Male',
-                      style: TextStyle(
+                      style: GoogleFonts.sora(
                           color: controller.sex.value == 'M'
                               ? Colors.black
                               : colorPrimaryL),
@@ -78,7 +79,7 @@ class PatientForm extends StatelessWidget {
                         )),
                     Text(
                       'Female',
-                      style: TextStyle(
+                      style: GoogleFonts.sora(
                           color: controller.sex.value == 'F'
                               ? Colors.black
                               : colorPrimaryL),

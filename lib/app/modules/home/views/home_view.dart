@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sirs_apps/app/routes/app_pages.dart';
 import 'package:sirs_apps/app/utils/constants.dart';
 
@@ -33,16 +34,16 @@ class HomeView extends GetView<HomeController> {
           children: [
             Text(
               controller.firstName.value,
-              style: const TextStyle(
+              style: GoogleFonts.sora(
                 // color: Colors.black87,
                 color: Colors.black,
-                fontWeight: FontWeight.bold,
+
                 fontSize: 24,
               ),
             ),
-            const Text(
+            Text(
               'We are happy to see you again',
-              style: TextStyle(
+              style: GoogleFonts.sora(
                 color: colorDarkGrey,
                 fontSize: 12,
               ),
@@ -98,7 +99,7 @@ class HomeView extends GetView<HomeController> {
                           controller.patientC.searchController.openView();
                         }
                       },
-                      child: const Align(
+                      child: Align(
                         alignment: Alignment.centerLeft,
                         child: Padding(
                           padding: const EdgeInsets.only(right: 0),
@@ -112,9 +113,8 @@ class HomeView extends GetView<HomeController> {
                               SizedBox(width: 20),
                               Text(
                                 'Search',
-                                style: TextStyle(
+                                style: GoogleFonts.sora(
                                   color: colorAccent,
-                                  fontWeight: FontWeight.bold,
                                   fontSize: 24,
                                 ),
                               ),
@@ -152,16 +152,15 @@ class HomeView extends GetView<HomeController> {
                   child: RichText(
                       text: TextSpan(
                     text: 'Not found? ',
-                    style: const TextStyle(
+                    style: GoogleFonts.sora(
                       color: colorDarkGrey,
                       fontSize: 12,
                     ),
                     children: [
                       TextSpan(
                         text: 'Add new patient',
-                        style: const TextStyle(
+                        style: GoogleFonts.sora(
                           color: colorPrimaryL,
-                          fontWeight: FontWeight.bold,
                           fontSize: 12,
                         ),
                         recognizer: TapGestureRecognizer()
@@ -202,13 +201,12 @@ class HomeView extends GetView<HomeController> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Text(
+                    Text(
                       'Medical Record Statitic',
-                      style: TextStyle(
+                      style: GoogleFonts.sora(
                         fontSize: 21,
                         color: colorDarkGrey,
                         // color: colorPrimaryL,
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
                     const SizedBox(height: 8),
@@ -238,9 +236,9 @@ class HomeView extends GetView<HomeController> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Text(
+                                  Text(
                                     'Total Record',
-                                    style: TextStyle(
+                                    style: GoogleFonts.sora(
                                       fontSize: 16,
                                       color: colorDarkGrey,
                                     ),
@@ -248,7 +246,7 @@ class HomeView extends GetView<HomeController> {
                                   Obx(
                                     () => Text(
                                       '${controller.totalRecord.value}',
-                                      style: const TextStyle(
+                                      style: GoogleFonts.sora(
                                         fontSize: 48,
                                         color: colorPrimaryL,
                                       ),
@@ -309,9 +307,9 @@ class HomeView extends GetView<HomeController> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Text(
+                                  Text(
                                     'Total Patient',
-                                    style: TextStyle(
+                                    style: GoogleFonts.sora(
                                       fontSize: 16,
                                       color: colorDarkGrey,
                                     ),
@@ -319,7 +317,7 @@ class HomeView extends GetView<HomeController> {
                                   Obx(
                                     () => Text(
                                       '${controller.totalPatients.value}',
-                                      style: const TextStyle(
+                                      style: GoogleFonts.sora(
                                         fontSize: 48,
                                         color: colorPrimaryL,
                                       ),
@@ -386,9 +384,9 @@ class HomeView extends GetView<HomeController> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Text(
+                                  Text(
                                     'Male',
-                                    style: TextStyle(
+                                    style: GoogleFonts.sora(
                                       fontSize: 16,
                                       color: colorDarkGrey,
                                     ),
@@ -396,7 +394,7 @@ class HomeView extends GetView<HomeController> {
                                   Obx(
                                     () => Text(
                                       '${controller.totalMale.value}',
-                                      style: const TextStyle(
+                                      style: GoogleFonts.sora(
                                         fontSize: 48,
                                         color: colorPrimaryL,
                                       ),
@@ -457,9 +455,9 @@ class HomeView extends GetView<HomeController> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Text(
+                                  Text(
                                     'Female',
-                                    style: TextStyle(
+                                    style: GoogleFonts.sora(
                                       fontSize: 16,
                                       color: colorDarkGrey,
                                     ),
@@ -467,7 +465,7 @@ class HomeView extends GetView<HomeController> {
                                   Obx(
                                     () => Text(
                                       '${controller.totalFemale.value}',
-                                      style: const TextStyle(
+                                      style: GoogleFonts.sora(
                                         fontSize: 48,
                                         color: colorPrimaryL,
                                       ),

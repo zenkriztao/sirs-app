@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sirs_apps/app/routes/app_pages.dart';
 
 import '../../patient/patient/views/widgets/input_pin_edit.dart';
@@ -147,9 +148,9 @@ class LoginController extends GetxController {
           Get.dialog(
             AlertDialog(
               backgroundColor: Colors.white,
-              title: const Text(
+              title: Text(
                 'Access Denied',
-                style: TextStyle(color: Colors.red),
+                style: GoogleFonts.sora(color: Colors.red),
               ),
               content: Text('You are not authorized to access this app'),
               actions: [
@@ -263,9 +264,9 @@ class LoginController extends GetxController {
           Get.dialog(
             AlertDialog(
               backgroundColor: Colors.white,
-              title: const Text(
+              title: Text(
                 'Access Denied',
-                style: TextStyle(color: Colors.red),
+                style: GoogleFonts.sora(color: Colors.red),
               ),
               content: const Text('You are not authorized to access this app'),
               actions: [

@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../../utils/constants.dart';
 import '../../home/views/home_view.dart';
 import '../../patient/patient/views/patient_view.dart';
@@ -79,7 +80,7 @@ class LayoutNavigationBarView extends GetView<LayoutNavigationBarController> {
         //                 () => controller.index.value != 1
         //                     ? const Text(
         //                         'Home',
-        //                         style: TextStyle(
+        //                         style: GoogleFonts.sora(
         //                           color: Colors.white,
         //                           fontWeight: FontWeight.w400,
         //                         ),
@@ -167,7 +168,8 @@ class LayoutNavigationBarView extends GetView<LayoutNavigationBarController> {
             showUnselectedLabels: false,
             selectedIconTheme:
                 const IconThemeData(color: colorPrimaryLL, size: 36),
-            selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
+            selectedLabelStyle:
+                GoogleFonts.sora(fontWeight: FontWeight.bold),
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon: Icon(controller.selectedIndex == 0

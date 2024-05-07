@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/widgets.dart';
 import '../../../../../data/patient.dart';
 import '../../../../../utils/constants.dart';
@@ -82,7 +83,7 @@ class PatientInfoCard extends StatelessWidget {
         ),
         title: Text(
           data.patientName.toUpperCase(),
-          style: const TextStyle(
+          style: TextStyle(
             color: colorDarkGrey,
             fontSize: 16,
             overflow: TextOverflow.ellipsis,
@@ -90,7 +91,7 @@ class PatientInfoCard extends StatelessWidget {
         ),
         subtitle: Text(
           '$age years old',
-          style: const TextStyle(color: colorDarkGrey),
+          style: GoogleFonts.sora(color: colorDarkGrey),
         ),
         trailing: Container(
           width: 80,

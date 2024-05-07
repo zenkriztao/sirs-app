@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../../utils/constants.dart';
@@ -33,7 +34,7 @@ class TabBarAbout extends StatelessWidget {
               const SizedBox(width: 20),
               Text(
                 controller.patientName.text.toUpperCase(),
-                style: const TextStyle(
+                style: GoogleFonts.sora(
                   color: colorTextSmall,
                   fontSize: 14,
                 ),
@@ -53,7 +54,7 @@ class TabBarAbout extends StatelessWidget {
               const SizedBox(width: 20),
               Text(
                 controller.sex.value == "M" ? "Male" : "Female",
-                style: const TextStyle(
+                style: GoogleFonts.sora(
                   color: colorTextSmall,
                   fontSize: 14,
                 ),
@@ -71,7 +72,7 @@ class TabBarAbout extends StatelessWidget {
               const SizedBox(width: 20),
               Text(
                 DateFormat("yyyy-MM-dd").format(controller.dateOfBirth),
-                style: const TextStyle(
+                style: GoogleFonts.sora(
                   color: colorTextSmall,
                   fontSize: 14,
                 ),
@@ -92,7 +93,7 @@ class TabBarAbout extends StatelessWidget {
                   controller.address.text,
                   maxLines: 3,
                   overflow: TextOverflow.visible,
-                  style: const TextStyle(
+                  style: GoogleFonts.sora(
                     color: colorTextSmall,
                     fontSize: 14,
                   ),

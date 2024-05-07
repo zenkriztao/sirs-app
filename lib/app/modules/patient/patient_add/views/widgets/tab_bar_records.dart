@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../../data/patient.dart';
@@ -71,9 +72,9 @@ class TabBarRecords extends StatelessWidget {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          const Text(
+                                           Text(
                                             'Record Name',
-                                            style: TextStyle(
+                                            style: GoogleFonts.sora(
                                               color: colorPrimaryL,
                                               fontSize: 16,
                                             ),
@@ -81,14 +82,14 @@ class TabBarRecords extends StatelessWidget {
                                           const SizedBox(height: 2),
                                           Text(
                                             data[index].recordName,
-                                            style: const TextStyle(
+                                            style: GoogleFonts.sora(
                                               color: colorTextSmall,
                                             ),
                                           ),
                                           const SizedBox(height: 4),
-                                          const Text(
+                                          Text(
                                             'Appointment Date',
-                                            style: TextStyle(
+                                            style: GoogleFonts.sora(
                                               color: colorPrimaryL,
                                               fontSize: 16,
                                             ),
@@ -99,14 +100,14 @@ class TabBarRecords extends StatelessWidget {
                                                     "EEEE, MMMM dd, yyyy 'at' HH:mm:ss, 'WIB'")
                                                 .format(DateTime.parse(
                                                     data[index].createdAt)),
-                                            style: const TextStyle(
+                                            style: GoogleFonts.sora(
                                               color: colorTextSmall,
                                             ),
                                           ),
                                           const SizedBox(height: 4),
-                                          const Text(
+                                          Text(
                                             'Diagnosis',
-                                            style: TextStyle(
+                                            style: GoogleFonts.sora(
                                               color: colorPrimaryL,
                                               fontSize: 16,
                                             ),
@@ -116,15 +117,15 @@ class TabBarRecords extends StatelessWidget {
                                             (data[index].diagnoses == ''
                                                 ? '-'
                                                 : data[index].diagnoses),
-                                            style: const TextStyle(
+                                            style: GoogleFonts.sora(
                                               color: colorTextSmall,
                                             ),
                                             textAlign: TextAlign.justify,
                                           ),
                                           const SizedBox(height: 2),
-                                          const Text(
+                                          Text(
                                             'Additional Notes',
-                                            style: TextStyle(
+                                            style: GoogleFonts.sora(
                                               color: colorPrimaryL,
                                               fontSize: 16,
                                             ),
@@ -134,7 +135,7 @@ class TabBarRecords extends StatelessWidget {
                                             data[index].additionalNotes == ''
                                                 ? '-'
                                                 : data[index].additionalNotes,
-                                            style: const TextStyle(
+                                            style: GoogleFonts.sora(
                                               color: colorTextSmall,
                                             ),
                                             textAlign: TextAlign.justify,
@@ -176,9 +177,10 @@ class TabBarRecords extends StatelessWidget {
             return Center(
               child: Column(
                 children: [
-                  const Text(
+                  Text(
                     'There is no records yet',
-                    style: TextStyle(color: colorTextSmall, fontSize: 16),
+                    style:
+                        GoogleFonts.sora(color: colorTextSmall, fontSize: 16),
                   ),
                   const SizedBox(height: 24),
                   ElevatedButton(

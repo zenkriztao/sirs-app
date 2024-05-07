@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sirs_apps/app/controllers/auth_controller.dart';
 import 'package:sirs_apps/app/utils/constants.dart';
 
@@ -19,7 +20,7 @@ class LoginView extends GetView<LoginController> {
         automaticallyImplyLeading: false,
         backgroundColor: colorPrimaryL,
         toolbarHeight: 150,
-        title: const Column(
+        title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CircleAvatar(
@@ -37,11 +38,8 @@ class LoginView extends GetView<LoginController> {
             SizedBox(height: 24),
             Text(
               'Sign in to Your\nAppsName Account!',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                  height: 1.2),
+              style: GoogleFonts.sora(
+                  color: Colors.white, fontSize: 24, height: 1.2),
             ),
           ],
         ),
@@ -83,7 +81,7 @@ class LoginView extends GetView<LoginController> {
                           controller.regUser.value
                               ? 'Login as admin?'
                               : 'Login as user?',
-                          style: const TextStyle(
+                          style: GoogleFonts.sora(
                             color: colorPrimaryL,
                           ),
                         ),
@@ -147,9 +145,9 @@ class LoginView extends GetView<LoginController> {
                     const Spacer(),
                     TextButton(
                       onPressed: () => controller.resetPassword(),
-                      child: const Text(
+                      child: Text(
                         'Forgot password?',
-                        style: TextStyle(color: colorPrimaryL),
+                        style: GoogleFonts.sora(color: colorPrimaryL),
                       ),
                     ),
                   ],
@@ -178,23 +176,22 @@ class LoginView extends GetView<LoginController> {
                     ),
                     fixedSize: Size(MediaQuery.of(context).size.width, 55),
                   ),
-                  child: const Text(
+                  child: Text(
                     'Login',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    style: GoogleFonts.sora(color: Colors.white, fontSize: 18),
                   ),
                 ),
                 const SizedBox(height: 30),
                 RichText(
                   text: TextSpan(
                     text: 'Don\'t have account?  ',
-                    style: const TextStyle(
+                    style: GoogleFonts.sora(
                       color: Colors.black,
-                      fontWeight: FontWeight.bold,
                     ),
                     children: [
                       TextSpan(
                         text: 'Sign Up',
-                        style: const TextStyle(color: colorPrimaryL),
+                        style: GoogleFonts.sora(color: colorPrimaryL),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             Get.toNamed(Routes.SING_UP);
