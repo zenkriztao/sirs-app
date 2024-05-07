@@ -39,7 +39,7 @@ class LoginView extends GetView<LoginController> {
             Text(
               'Sign in to Your\nAppsName Account!',
               style: GoogleFonts.sora(
-                  color: Colors.white, fontSize: 24, height: 1.2),
+                  color: Colors.white, fontSize: 24, height: 1.2, fontWeight: FontWeight.bold),
             ),
           ],
         ),
@@ -184,7 +184,7 @@ class LoginView extends GetView<LoginController> {
                   ),
                   child: Text(
                     'Login',
-                    style: GoogleFonts.sora(color: Colors.white, fontSize: 18),
+                    style: GoogleFonts.sora(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ),
                 const SizedBox(height: 30),
@@ -197,7 +197,7 @@ class LoginView extends GetView<LoginController> {
                     children: [
                       TextSpan(
                         text: 'Sign Up',
-                        style: GoogleFonts.sora(color: colorPrimaryL),
+                        style: GoogleFonts.sora(color: colorPrimaryL, fontWeight: FontWeight.bold),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             Get.toNamed(Routes.SING_UP);

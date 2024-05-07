@@ -38,7 +38,7 @@ class SingUpView extends GetView<SignUpController> {
             Text(
               'Create Your\nAppsName Account!',
               style: GoogleFonts.sora(
-                  color: Colors.white, fontSize: 24, height: 1.2),
+                  color: Colors.white, fontSize: 24, height: 1.2, fontWeight: FontWeight.bold),
             ),
           ],
         ),
@@ -301,7 +301,7 @@ class SingUpView extends GetView<SignUpController> {
                   },
                   child: Text(
                     'Sign Up',
-                    style: GoogleFonts.sora(fontSize: 16),
+                    style: GoogleFonts.sora(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
