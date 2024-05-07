@@ -14,6 +14,7 @@ abstract class Routes {
   static const SING_UP = _Paths.SING_UP;
   static const USER_DETAILS = _Paths.USER_DETAILS;
   static const CHANGE_PASSWORD = _Paths.CHANGE_PASSWORD;
+  static const ABOUT = _Paths.ABOUT;
 }
 
 abstract class _Paths {
@@ -29,4 +30,5 @@ abstract class _Paths {
   static const SING_UP = '/sing-up';
   static const USER_DETAILS = '/user-details';
   static const CHANGE_PASSWORD = '/change-password';
+  static const ABOUT = '/about';
 }

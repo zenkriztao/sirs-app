@@ -3,11 +3,13 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:sirs_apps/app/controllers/firestore_controller.dart';
 import 'package:sirs_apps/app/data/patient.dart';
+import 'package:sirs_apps/app/modules/patient/patient/controllers/patient_controller.dart';
 import 'package:sirs_apps/app/utils/constants.dart';
 import 'package:intl/intl.dart';
 
 class PatientAddController extends GetxController
     with GetSingleTickerProviderStateMixin {
+  final patientsC = Get.find<PatientController>();
   late TabController tabController = TabController(length: 0, vsync: this); //
   final pageType = PageType.TAMBAH.obs;
   final docId = ''.obs;
@@ -29,7 +31,6 @@ class PatientAddController extends GetxController
         //TODO forget asign sex
         Get.showSnackbar(
           const GetSnackBar(
-            backgroundColor: Colors.red,
             message: 'You must fill all the form!',
             duration: Duration(seconds: 2),
           ),
@@ -116,5 +117,6 @@ class PatientAddController extends GetxController
     patientName.dispose();
     address.dispose();
     dateOfBirthC.dispose();
+    patientsC.refreshData();
   }
 }

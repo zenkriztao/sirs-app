@@ -21,11 +21,11 @@ class HomeView extends GetView<HomeController> {
         elevation: 1,
         leading: Container(
           margin: const EdgeInsets.only(left: 12),
-          child: const CircleAvatar(
-            backgroundImage: AssetImage(
-              'assets/images/michale.jpeg',
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/icons/apps_logo.png'),
+              fit: BoxFit.cover,
             ),
-            radius: 20,
           ),
         ),
         title: Column(

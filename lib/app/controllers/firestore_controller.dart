@@ -38,7 +38,6 @@ class FirestoreControllerUp extends GetxController {
       (value) {
         Get.showSnackbar(
           const GetSnackBar(
-            backgroundColor: Colors.green,
             title: 'Success',
             message: "Patient added successfully",
             duration: Duration(seconds: 3),
@@ -49,7 +48,6 @@ class FirestoreControllerUp extends GetxController {
       (error) {
         Get.showSnackbar(
           GetSnackBar(
-            backgroundColor: Colors.red,
             title: 'Error',
             message: "Failed to add patient: $error",
             duration: const Duration(seconds: 3),
@@ -73,7 +71,6 @@ class FirestoreControllerUp extends GetxController {
       });
       Get.showSnackbar(
         const GetSnackBar(
-          backgroundColor: Colors.green,
           title: 'Success',
           message: "Record added successfully!",
           duration: Duration(seconds: 2),
@@ -82,7 +79,6 @@ class FirestoreControllerUp extends GetxController {
     } catch (e) {
       Get.showSnackbar(
         GetSnackBar(
-          backgroundColor: Colors.red,
           title: 'Error',
           message: "Failed to add record: $e",
           duration: const Duration(seconds: 2),
@@ -103,7 +99,6 @@ class FirestoreControllerUp extends GetxController {
           .delete();
       Get.showSnackbar(
         const GetSnackBar(
-          backgroundColor: Colors.green,
           title: 'Success',
           message: "Patient delete successfully!",
           duration: Duration(seconds: 3),
@@ -112,7 +107,6 @@ class FirestoreControllerUp extends GetxController {
     } catch (e) {
       Get.showSnackbar(
         GetSnackBar(
-          backgroundColor: Colors.red,
           title: 'Error',
           message: "Failed to delete patient: $e",
           duration: const Duration(seconds: 3),
@@ -127,7 +121,6 @@ class FirestoreControllerUp extends GetxController {
       await patients.doc(patientId).update(updatedData.toMap());
       Get.showSnackbar(
         const GetSnackBar(
-          backgroundColor: Colors.green,
           title: 'Success',
           message: "Patient updated successfully!",
           duration: Duration(seconds: 2),
@@ -136,7 +129,6 @@ class FirestoreControllerUp extends GetxController {
     } catch (error) {
       Get.showSnackbar(
         GetSnackBar(
-          backgroundColor: Colors.red,
           title: 'Error',
           message: "Failed to update patient: $error",
           duration: const Duration(seconds: 2),
@@ -190,7 +182,6 @@ class FirestoreControllerUp extends GetxController {
       });
       Get.showSnackbar(
         const GetSnackBar(
-          backgroundColor: Colors.green,
           title: 'Success',
           message: "Pin updated successfully!",
           duration: Duration(seconds: 2),
@@ -198,8 +189,7 @@ class FirestoreControllerUp extends GetxController {
       );
     } else {
       Get.showSnackbar(
-        GetSnackBar(
-          backgroundColor: Colors.red,
+        const GetSnackBar(
           title: 'Error',
           message: "Old pin is incorrect!",
           duration: const Duration(seconds: 2),

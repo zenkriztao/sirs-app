@@ -146,7 +146,7 @@ class LoginView extends GetView<LoginController> {
                     const Text('Remember me'),
                     const Spacer(),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () => controller.resetPassword(),
                       child: const Text(
                         'Forgot password?',
                         style: TextStyle(color: colorPrimaryL),

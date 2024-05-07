@@ -92,7 +92,6 @@ class ChangePasswordController extends GetxController {
 //       EasyLoading.dismiss();
 //       Get.showSnackbar(
 //         const GetSnackBar(
-//           backgroundColor: Colors.green,
 //           title: 'Success',
 //           message: "Pin updated successfully!",
 //           duration: Duration(seconds: 2),
@@ -102,7 +101,6 @@ class ChangePasswordController extends GetxController {
 //       EasyLoading.dismiss();
 //       Get.showSnackbar(
 //         const GetSnackBar(
-//           backgroundColor: Colors.red,
 //           title: 'Error',
 //           message: "Old pin is incorrect!",
 //           duration: const Duration(seconds: 2),
@@ -113,7 +111,6 @@ class ChangePasswordController extends GetxController {
 //     EasyLoading.dismiss();
 //     Get.showSnackbar(
 //       const GetSnackBar(
-//         backgroundColor: Colors.red,
 //         title: 'Error',
 //         message: "An unexpected error occurred!",
 //         duration: const Duration(seconds: 2),

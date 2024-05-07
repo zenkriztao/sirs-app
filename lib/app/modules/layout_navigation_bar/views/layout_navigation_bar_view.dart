@@ -11,6 +11,8 @@ class LayoutNavigationBarView extends GetView<LayoutNavigationBarController> {
   const LayoutNavigationBarView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LayoutNavigationBarController());
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(

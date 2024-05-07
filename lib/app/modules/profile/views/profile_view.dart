@@ -171,14 +171,14 @@ class ProfileView extends GetView<ProfileController> {
                 MenuProfile(
                   title: 'About',
                   icon: Icons.info,
-                  onTap: () {},
+                  onTap: () => Get.toNamed(Routes.ABOUT),
                 ),
                 const SizedBox(height: 8),
                 MenuProfile(
                   title: 'Logout',
                   icon: Icons.logout,
-                  onTap: () async {
-                    await controller.logout();
+                  onTap: () {
+                    controller.logout();
                   },
                 ),
               ],

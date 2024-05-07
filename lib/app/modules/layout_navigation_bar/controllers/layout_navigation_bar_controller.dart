@@ -7,43 +7,40 @@ import '../../patient/patient/controllers/patient_controller.dart';
 import '../../profile/controllers/profile_controller.dart';
 
 class LayoutNavigationBarController extends GetxController {
-  //TODO: Implement New LayoutNavigationBarController
+  // TODO: Implement New LayoutNavigationBarController
   final selectedIndex = 1.obs;
   void onItemTapped(int index) {
     selectedIndex.value = index;
     update();
   }
 
-  //TODO: Implement LayoutNavigationBarController
-  // final pageController = PageController(initialPage: 1);
-  // final HomeController homeC;
-  // final PatientController patientC;
-  // final ProfileController profileC;
-
-  // LayoutNavigationBarController()
-  //     : patientC = Get.put(PatientController()),
-  //       homeC = Get.put(HomeController()),
-  //       profileC = Get.put(ProfileController());
+  // TODO: Implement LayoutNavigationBarController
   final pageController = PageController(initialPage: 1);
-  late HomeController homeC;
-  late PatientController patientC;
-  late ProfileController profileC;
+  final HomeController homeC;
+  final PatientController patientC;
+  final ProfileController profileC;
+
+  LayoutNavigationBarController()
+      : patientC = Get.put(PatientController()),
+        homeC = Get.put(HomeController()),
+        profileC = Get.put(ProfileController());
+  // final pageController = PageController(initialPage: 1);
+  // late HomeController homeC;
+  // late PatientController patientC;
+  // late ProfileController profileC;
 
   final index = 1.obs;
 
   @override
   void onInit() {
     super.onInit();
-    patientC = Get.put(PatientController());
-    homeC = Get.put(HomeController());
-    profileC = Get.put(ProfileController());
   }
 
   @override
   void onReady() {
     // pageController.animateToPage(index.value,
-    //     duration: const Duration(milliseconds: 1), curve: Curves.easeOut);
-    super.onReady();
+    //     duration: const Duration(milliseconds: 300), curve: Curves.easeOut);
+    // super.onReady();
   }
 
   @override

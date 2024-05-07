@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:sirs_apps/app/data/patient.dart';
 import 'package:sirs_apps/app/routes/app_pages.dart';
 import '../../../../utils/constants.dart';
 import '../controllers/patient_controller.dart';
+import 'widgets/input_pin_edit.dart';
 import 'widgets/patient_info_card.dart';
 
 class PatientView extends GetView<PatientController> {
@@ -26,6 +29,12 @@ class PatientView extends GetView<PatientController> {
           ),
         ),
         actions: [
+          // IconButton(
+          //   onPressed: () {
+          //     debugPrint('PIN: ${controller.pin.value}');
+          //   },
+          //   icon: Icon(Icons.text_snippet),
+          // ),
           SearchAnchor(
             viewElevation: 0.5,
             viewShape: const RoundedRectangleBorder(
@@ -111,37 +120,66 @@ class PatientView extends GetView<PatientController> {
             ? RefreshIndicator(
                 onRefresh: controller.refreshData,
                 child: ListView.separated(
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
                   separatorBuilder: (context, index) =>
                       const SizedBox(height: 2),
                   itemCount: controller.dataPatient.length,
                   itemBuilder: (context, index) {
                     final data = controller.dataPatient[index];
                     return PatientInfoCard(
-                        data: data,
-                        onTap: () {
-                          debugPrint(data.docId!);
-                          controller.toPatientDetail(
-                            {
-                              'pageType': PageType.DETAIL,
-                              'docId': data.docId,
-                              'dateOfBirth': data.dateOfBirth,
-                            },
-                          );
-                        },
-                        editFunction: () {
-                          Navigator.pop(context);
-                          controller.editPatient(
-                            {
-                              'pageType': PageType.EDIT,
-                              'docId': data.docId,
-                              'dateOfBirth': data.dateOfBirth,
-                            },
-                          );
-                        },
-                        delateFunction: () {
-                          controller.deletePatient(data.docId!);
-                          Navigator.pop(context);
-                        });
+                      show: true,
+                      data: data,
+                      onTap: () {
+                        debugPrint(data.docId!);
+                        controller.toPatientDetail(
+                          {
+                            'pageType': PageType.DETAIL,
+                            'docId': data.docId,
+                            'dateOfBirth': data.dateOfBirth,
+                          },
+                        );
+                      },
+                      editFunction: () {
+                        Navigator.pop(context);
+                        showModalBottomSheet(
+                          context: context,
+                          builder: (context) {
+                            // i want to make user input pin first before edit
+                            return InputPinEdit(
+                              controller: controller,
+                              data: data,
+                              onSubmit: () async {
+                                await controller.validateEditPin(
+                                  int.parse(controller.pinController.text),
+                                  {
+                                    'pageType': PageType.EDIT,
+                                    'docId': data.docId,
+                                    'dateOfBirth': data.dateOfBirth,
+                                  },
+                                  context,
+                                );
+                              },
+                            );
+                          },
+                        );
+                      },
+                      delateFunction: () {
+                        Navigator.pop(context);
+                        showModalBottomSheet(
+                          context: context,
+                          builder: (context) {
+                            return InputPinEdit(
+                              controller: controller,
+                              data: data,
+                              onSubmit: () {
+                                Navigator.pop(context);
+                                controller.deletePatient(data.docId!);
+                              },
+                            );
+                          },
+                        );
+                      },
+                    );
                   },
                 ),
               )

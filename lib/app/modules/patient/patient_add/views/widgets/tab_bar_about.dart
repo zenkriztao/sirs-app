@@ -70,8 +70,7 @@ class TabBarAbout extends StatelessWidget {
               ),
               const SizedBox(width: 20),
               Text(
-                DateFormat("EEEE, MMMM dd, yyyy")
-                    .format(controller.dateOfBirth),
+                DateFormat("yyyy-MM-dd").format(controller.dateOfBirth),
                 style: const TextStyle(
                   color: colorTextSmall,
                   fontSize: 14,

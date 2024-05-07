@@ -10,9 +10,11 @@ class PatientInfoCard extends StatelessWidget {
     required this.editFunction,
     required this.delateFunction,
     required this.onTap,
+    required this.show,
   });
 
   final Patient data;
+  final bool show;
   final void Function()? editFunction;
   final void Function()? delateFunction;
   final void Function()? onTap;
@@ -31,38 +33,40 @@ class PatientInfoCard extends StatelessWidget {
     //Icons.arrow_forward_ios
     return InkWell(
       onTap: onTap,
-      onLongPress: () {
-        showModalBottomSheet(
-          backgroundColor: Colors.white,
-          context: context,
-          builder: (context) {
-            return Container(
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                ),
-                color: Colors.white,
-              ),
-              height: 120,
-              child: Column(
-                children: [
-                  ListTile(
-                    leading: const Icon(Icons.edit, color: Colors.blue),
-                    title: const Text('Edit Patient Data'),
-                    onTap: editFunction,
-                  ),
-                  ListTile(
-                    leading: const Icon(Icons.delete, color: Colors.red),
-                    title: const Text('Delete Patient Data'),
-                    onTap: delateFunction,
-                  ),
-                ],
-              ),
-            );
-          },
-        );
-      },
+      onLongPress: show
+          ? () {
+              showModalBottomSheet(
+                backgroundColor: Colors.white,
+                context: context,
+                builder: (context) {
+                  return Container(
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                      ),
+                      color: Colors.white,
+                    ),
+                    height: 120,
+                    child: Column(
+                      children: [
+                        ListTile(
+                          leading: const Icon(Icons.edit, color: Colors.blue),
+                          title: const Text('Edit Patient Data'),
+                          onTap: editFunction,
+                        ),
+                        ListTile(
+                          leading: const Icon(Icons.delete, color: Colors.red),
+                          title: const Text('Delete Patient Data'),
+                          onTap: delateFunction,
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              );
+            }
+          : null,
       child: ListTile(
         leading: CircleAvatar(
           radius: 24,
