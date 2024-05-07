@@ -70,6 +70,12 @@ class LoginView extends GetView<LoginController> {
               children: [
                 Row(
                   children: [
+                    Obx(() => Image.asset(
+                    controller.regUser.value
+                        ? 'assets/images/patient.png'
+                        : 'assets/images/doctor.png',
+                    width: 150,
+                  )),
                     const Spacer(),
                     Obx(
                       () => InkWell(
@@ -90,7 +96,7 @@ class LoginView extends GetView<LoginController> {
                     const SizedBox(width: 8),
                   ],
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 30),
                 TextFormField(
                   controller: controller.emailC,
                   decoration: borderTextFormField.copyWith(
